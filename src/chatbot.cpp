@@ -54,10 +54,6 @@ ChatBot &ChatBot::operator=(ChatBot &source) {
     _chatLogic = source._chatLogic;
     _chatLogic->SetChatbotHandle(this);
     source._chatLogic = nullptr;
-    if (_image != NULL) {
-        delete _image;
-        _image = NULL;
-    }
     _image = source._image;
     source._image = nullptr;
     return *this;
@@ -72,10 +68,6 @@ ChatBot::ChatBot(ChatBot &source) {
     _chatLogic = source._chatLogic;
     _chatLogic->SetChatbotHandle(this);
     source._chatLogic = nullptr;
-    if (_image != NULL) {
-        delete _image;
-        _image = NULL;
-    }
     _image = source._image;
     source._image = nullptr;
 }
@@ -89,10 +81,6 @@ ChatBot::ChatBot(ChatBot &&source) {
     _chatLogic = source._chatLogic;
     _chatLogic->SetChatbotHandle(this);
     source._chatLogic = nullptr;
-    if (_image != NULL) {
-        delete _image;
-        _image = NULL;
-    }
     _image = source._image;
     source._image = nullptr;
 }
@@ -106,10 +94,6 @@ ChatBot &ChatBot::operator=(ChatBot &&source) {
     _chatLogic = source._chatLogic;
     _chatLogic->SetChatbotHandle(this);
     source._chatLogic = nullptr;
-    if (_image != NULL) {
-        delete _image;
-        _image = NULL;
-    }
     _image = source._image;
     source._image = nullptr;
     return *this;
