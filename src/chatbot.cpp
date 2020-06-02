@@ -52,7 +52,7 @@ ChatBot &ChatBot::operator=(ChatBot &source) {
     _rootNode = source._rootNode;
     source._rootNode = nullptr;
     _chatLogic = source._chatLogic;
-    _chatLogic.SetChatbotHandle(this);
+    _chatLogic->SetChatbotHandle(this);
     source._chatLogic = nullptr;
     if (_image != NULL) {
         delete _image;
@@ -70,7 +70,7 @@ ChatBot::ChatBot(ChatBot &source) {
     _rootNode = source._rootNode;
     source._rootNode = nullptr;
     _chatLogic = source._chatLogic;
-    _chatLogic.SetChatbotHandle(this);
+    _chatLogic->SetChatbotHandle(this);
     source._chatLogic = nullptr;
     if (_image != NULL) {
         delete _image;
@@ -87,7 +87,7 @@ ChatBot::ChatBot(ChatBot &&source) {
     _rootNode = source._rootNode;
     source._rootNode = nullptr;
     _chatLogic = source._chatLogic;
-    _chatLogic.SetChatbotHandle(this);
+    _chatLogic->SetChatbotHandle(this);
     source._chatLogic = nullptr;
     if (_image != NULL) {
         delete _image;
@@ -104,7 +104,7 @@ ChatBot &ChatBot::operator=(ChatBot &&source) {
     _rootNode = source._rootNode;
     source._rootNode = nullptr;
     _chatLogic = source._chatLogic;
-    _chatLogic.SetChatbotHandle(this);
+    _chatLogic->SetChatbotHandle(this);
     source._chatLogic = nullptr;
     if (_image != NULL) {
         delete _image;
